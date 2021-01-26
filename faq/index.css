@@ -1,0 +1,212 @@
+*,
+* ::before,
+* ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+body
+{
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  /* background-color: #fff; */
+  box-sizing: border-box;
+  font-family: "noto-serif",serif;
+}
+
+.free , .free1{
+    padding: 20px;
+    color:#fff;
+}
+
+.meet{
+    border-bottom: 3px solid #fff;
+}
+.free2 , .free3{
+    padding: 20px;
+    color:#000;
+}
+
+.meet2{
+    border-bottom: 3px solid #000;
+    color:#000;
+}
+.meet3{
+    color:#000;
+    font-size:20px;
+}
+.meet1{
+    color: white;
+    font-size:20px;
+    padding:50px 0 30px 0 ;
+}
+.my{
+    overflow: hidden;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.f1{
+    background: url(../images/ab3.png) no-repeat center center fixed;
+    background-color: black;
+    background-size: 150% 150%;
+}
+
+
+
+/* .faq
+{
+  background-color: #fff;
+} */
+.faq .row
+{
+  padding: 10px 0;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 14px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  transition: 0.4s;
+}
+
+
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 14px;
+  background-color: #000;
+  color:#000;
+  font-size:17px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
+
+.main{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.main h1{
+    position: relative;
+    height: auto;
+    width: 550px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin: 5% 0 2% 0;
+    font-size: 2.8em;
+    font-weight: 650;
+    letter-spacing: 1.5px;
+    color: #017bf5;
+    border-left: 5px solid  #017bf5;
+    border-right: 5px solid  #017bf5;
+    background: rgba(0,0,0,.05);
+}
+.main p{
+    position: relative;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    color: #777;
+}
+.gallery{
+    position: relative;
+    height:100%;
+    width: 90%;
+    margin: auto;
+    padding: 45px 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto; /*I wrote auto 4times bcoz i want 4rows*/
+    grid-gap: 2vh;
+    grid-auto-flow: dense;
+}
+
+.gallery .img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 2px;
+    box-shadow: 0px 2px 2px rgba(0,0,0,.9);
+}
+
+.gallery .img img{
+    height:100%;
+    width: 100%;
+    filter: brightness(.5) grayscale(100);
+    transition: .3s ease-in-out;;
+} 
+
+.gallery .img:hover img{
+    filter: brightness(1) grayscale(0);
+}
+
+@media only screen and (max-width:1100px){
+    .main h1{
+        font-size: 1.8em;
+        width: 300px;
+    }
+    .main p{
+        font-size: 1.2em;
+    }
+    .main .gallery{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+}
+@media only screen and (max-width:425px){
+    .main h1{
+        font-size: 1.2em;
+        width: 300px;
+    }
+    .main p{
+        font-size: .89em;
+    }
+    .main .gallery{
+        display: grid;
+        grid-template-columns: auto auto ;
+    }
+    .main .gallery .img{
+        display: block;
+        height: 100%;
+        width: 100%;
+        margin: 2% 0;
+    }
+    .main .gallery .img img{
+        display: block;
+        filter: brightness(1) grayscale(0);
+    }
+}
